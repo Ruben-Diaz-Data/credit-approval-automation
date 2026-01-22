@@ -1,34 +1,34 @@
-# Credit Approval Automation
+# Credit Application API – Prueba Técnica
 
-Este proyecto simula un **sistema de aprobación de crédito** para una fintech de crédito al consumo.  
-El objetivo es demostrar un flujo end-to-end de recepción de solicitudes, evaluación mediante reglas y automatización de decisiones mediante una API.
+Este proyecto es una API REST desarrollada con **FastAPI** que simula el flujo básico de evaluación de una solicitud de crédito, desde la captura de datos del solicitante hasta la decisión final (aprobado o rechazado).
+
+El objetivo del proyecto es demostrar el diseño de endpoints, lógica de negocio básica y estructuración de un backend sencillo, enfocado en un caso realista del sector financiero.
 
 ---
 
+## 📌 Flujo General del Sistema
 
-### 1. Clonar el repositorio
-```bash
-git clone <URL_DEL_REPOSITORIO>
-cd credit-approval-automation
+1. Crear una solicitud de crédito.
+2. Subir documentos asociados a la solicitud.
+3. Obtener un score de crédito (simulado).
+4. Evaluar la solicitud con base en reglas simples.
+5. Obtener la decisión final de la solicitud.
 
-### 2. Crear un entorno virtual
-bash
-Copiar código
-python -m venv venv
+---
 
-3. Activar el entorno virtual
-Windows
-source venv/bin/activate
+## 🚀 Endpoints Disponibles
 
-4. Instalar dependencias
-pip install -r requirements.tx
+### 1️⃣ Crear solicitud de crédito
+**POST** `/applications/`
 
-5. Ejecutar la aplicación
-uvicorn app.main:app --reload
+Crea una nueva solicitud de crédito con los datos del solicitante.
 
-📄 Documentación interactiva (Swagger)
-Una vez levantado el servidor, puedes acceder a la documentación de la API en:
-arduino
-Copiar código
-http://127.0.0.1:8000/docs
- QUIERO QIUE LOS TITULOS 2,3,4 Y 5 TAMBIEN ESTEN EN NEGRITA COMO EL 1
+Ejemplo de request:
+```json
+{
+  "name": "Juan Pérez",
+  "rfc": "JUAP800101XXX",
+  "curp": "JUAP800101HDFXXX01",
+  "age": 35,
+  "monthly_income": 20000
+}
