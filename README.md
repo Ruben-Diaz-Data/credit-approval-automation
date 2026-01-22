@@ -6,7 +6,7 @@ El objetivo del proyecto es demostrar el diseño de endpoints, lógica de negoci
 
 ---
 
-## 📌 Flujo General del Sistema
+## Flujo General del Sistema
 
 1. Crear una solicitud de crédito.
 2. Subir documentos asociados a la solicitud.
@@ -16,7 +16,7 @@ El objetivo del proyecto es demostrar el diseño de endpoints, lógica de negoci
 
 ---
 
-## 🚀 Endpoints Disponibles
+## Endpoints Disponibles
 
 ### 1️⃣ Crear solicitud de crédito
 **POST** `/applications/`
